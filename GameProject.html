@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Connect Four!</title>
+    <link rel="stylesheet" href="GameProjectMaster.css">
+</head>
+<body>
+<div id="nav">
+    <a id="brand" href="#">Connect Four!</a>
+    <a id="whatIs" target="_blank" rel="noopener noreferrer" href="https://en.wikipedia.org/wiki/Connect_Four">What is
+        Connect Four?</a>
+    <a id="reset" href="">Reset</a>
+</div>
+
+<div id="container" align='center'>
+    <h3 id="playerTurn"><span id="player">player</span>'s turn(<span id="playerColor">color</span> disc)</h3>
+    <table class="board">
+        <tr>
+            <td><button type="button" onclick="assignEventListener(this)"></button></td>
+            <td><button type="button" onclick="assignEventListener(this)"></button></td>
+            <td><button type="button" onclick="assignEventListener(this)"></button></td>
+            <td><button type="button" onclick="assignEventListener(this)"></button></td>
+            <td><button type="button" onclick="assignEventListener(this)"></button></td>
+            <td><button type="button" onclick="assignEventListener(this)"></button></td>
+            <td><button type="button" onclick="assignEventListener(this)"></button></td>
+        </tr>
+        <tr>
+            <td><button type="button" onclick="assignEventListener(this)"></button></td>
+            <td><button type="button" onclick="assignEventListener(this)"></button></td>
+            <td><button type="button" onclick="assignEventListener(this)"></button></td>
+            <td><button type="button" onclick="assignEventListener(this)"></button></td>
+            <td><button type="button" onclick="assignEventListener(this)"></button></td>
+            <td><button type="button" onclick="assignEventListener(this)"></button></td>
+            <td><button type="button" onclick="assignEventListener(this)"></button></td>
+        </tr>
+        <tr>
+            <td><button type="button" onclick="assignEventListener(this)"></button></td>
+            <td><button type="button" onclick="assignEventListener(this)"></button></td>
+            <td><button type="button" onclick="assignEventListener(this)"></button></td>
+            <td><button type="button" onclick="assignEventListener(this)"></button></td>
+            <td><button type="button" onclick="assignEventListener(this)"></button></td>
+            <td><button type="button" onclick="assignEventListener(this)"></button></td>
+            <td><button type="button" onclick="assignEventListener(this)"></button></td>
+        </tr>
+        <tr>
+            <td><button type="button" onclick="assignEventListener(this)"></button></td>
+            <td><button type="button" onclick="assignEventListener(this)"></button></td>
+            <td><button type="button" onclick="assignEventListener(this)"></button></td>
+            <td><button type="button" onclick="assignEventListener(this)"></button></td>
+            <td><button type="button" onclick="assignEventListener(this)"></button></td>
+            <td><button type="button" onclick="assignEventListener(this)"></button></td>
+            <td><button type="button" onclick="assignEventListener(this)"></button></td>
+        </tr>
+        <tr>
+            <td><button type="button" onclick="assignEventListener(this)"></button></td>
+            <td><button type="button" onclick="assignEventListener(this)"></button></td>
+            <td><button type="button" onclick="assignEventListener(this)"></button></td>
+            <td><button type="button" onclick="assignEventListener(this)"></button></td>
+            <td><button type="button" onclick="assignEventListener(this)"></button></td>
+            <td><button type="button" onclick="assignEventListener(this)"></button></td>
+            <td><button type="button" onclick="assignEventListener(this)"></button></td>
+        </tr>
+        <tr>
+            <td><button type="button" onclick="assignEventListener(this)"></button></td>
+            <td><button type="button" onclick="assignEventListener(this)"></button></td>
+            <td><button type="button" onclick="assignEventListener(this)"></button></td>
+            <td><button type="button" onclick="assignEventListener(this)"></button></td>
+            <td><button type="button" onclick="assignEventListener(this)"></button></td>
+            <td><button type="button" onclick="assignEventListener(this)"></button></td>
+            <td><button type="button" onclick="assignEventListener(this)"></button></td>
+        </tr>
+    </table>
+</div>
+
+<!-- Include Scala.js compiled code -->
+<script type="text/javascript" src="./target/scala-2.12/connectfour-fastopt.js"></script>
+</body>
+</html>
