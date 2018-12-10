@@ -10,7 +10,7 @@ object GameProject {
   val player1: String = "Joao"
   val player1Color: String = "red"
 
-  val player2: String = "Isabela"
+  val player2: String = "Chico"
   val player2Color: String = "mediumAquaMarine"
 
   val tr: dom.NodeList = document.querySelectorAll("tr")
@@ -156,19 +156,10 @@ object GameProject {
   // ------------------------- CHECK END GAME SITUATIONS -------------------------
 
   def checkHorizontalWin(): Boolean = {
-    // check if there is a horizontal win
-    def auxCheckHorizontalWin3(row: Int, column: Int): Boolean = {
-      if (equalColors(returnColor(row, column), returnColor(row, column + 1), returnColor(row, column + 2), returnColor(row, column + 3))) {
-        true
-      } else {
-        false
-      }
-    }
-
     // change the columns
     def auxCheckHorizontalWin2(row: Int, column: Int): Boolean = {
       if (column < (td.length / tr.length) - 3) {
-        if (auxCheckHorizontalWin3(row, column)) {
+        if (equalColors(returnColor(row, column), returnColor(row, column + 1), returnColor(row, column + 2), returnColor(row, column + 3))) {
           true
         } else {
           auxCheckHorizontalWin2(row, column + 1)
@@ -195,19 +186,10 @@ object GameProject {
   }
 
   def checkVerticalWin(): Boolean = {
-    // check if there is a vertical win
-    def auxCheckVerticalWin3(row: Int, column: Int): Boolean = {
-      if (equalColors(returnColor(row, column), returnColor(row + 1, column), returnColor(row + 2, column), returnColor(row + 3, column))) {
-        true
-      } else {
-        false
-      }
-    }
-
     // change the rows
     def auxCheckVerticalWin2(row: Int, column: Int): Boolean = {
       if (row < tr.length - 3) {
-        if (auxCheckVerticalWin3(row, column)) {
+        if (equalColors(returnColor(row, column), returnColor(row + 1, column), returnColor(row + 2, column), returnColor(row + 3, column))) {
           true
         } else {
           auxCheckVerticalWin2(row + 1, column)
@@ -283,6 +265,7 @@ object GameProject {
   // End game
   def endGame() {
     document.querySelector("#playerTurn").innerHTML = defineWinner() + " won. Click reset to play again."
+    document.querySelector("#playerTurn").setAttribute("style", "color: " + defineColor())
     game_on = false
 
     def defineWinner(): String = {
@@ -290,6 +273,13 @@ object GameProject {
         player2
       } else {
         player1
+      }
+    }
+    def defineColor(): String = {
+      if (currentPlayer() == player1) {
+        player2Color
+      } else {
+        player1Color
       }
     }
   }
